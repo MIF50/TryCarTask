@@ -18,22 +18,21 @@ class PostsVC: BaseVC {
     // MARK:- Handler
     fileprivate let handler = PostsHandler()
     
-    private var posts = [Post]()
-
     override func setupView() {
         configureTableView()
         viewModel.fetchPosts()
     }
     
     private func configureTableView() {
+        tableView.contentInset = .init(top: 16, left: 0, bottom: 16, right: 0)
         /// register cell
-        
+        tableView.register(PostTVCell.create(), forCellReuseIdentifier: "PostTVCell")
         /// delegate
         tableView.dataSource = handler
         tableView.delegate = handler
         /// action in cell
-        handler.didTapPost = { [weak self] indexPath in
-            self?.navigationController?.pushViewController(CommentsVC.create(with: 1), animated: true)
+        handler.didTapPost = { [weak self] _ , postId in
+            self?.navigationController?.pushViewController(CommentsVC.create(with: postId), animated: true)
         }
     }
     
@@ -47,7 +46,7 @@ class PostsVC: BaseVC {
                     break
                 }
             },receiveValue: { [weak self]  newPosts in
-                self?.posts = newPosts
+                self?.handler.indexData = newPosts
                 self?.tableView.reloadData()
             })
     }

@@ -7,7 +7,6 @@
 
 import Foundation
 
-
 struct Comment: Codable {
     let postId: Int
     let id: Int

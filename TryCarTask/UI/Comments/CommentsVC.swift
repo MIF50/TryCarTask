@@ -19,20 +19,30 @@ class CommentsVC: BaseVC {
     private let handler = CommentHandler()
     
     // MARK:- vars
-    private var comments = [Comment]()
     private var postId  = 0
     
     override func setupView() {
         super.setupView()
         configureTableView()
-        
+        configureNavigationBar()
+        viewModel.fetchComments(with: postId)
     }
     
     private func configureTableView() {
+        tableView.contentInset = .init(top: 8, left: 0, bottom: 8, right: 0)
         /// register cell
+        tableView.register(CommentTVCell.create(), forCellReuseIdentifier: "CommentTVCell")
         /// delegate
         tableView.dataSource = handler
         tableView.delegate = handler
+    }
+    
+    private func configureNavigationBar() {
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(didTapFavorite))
+    }
+    
+    @objc private func didTapFavorite() {
+        
     }
     
     override func observeViewModel() {
@@ -45,10 +55,9 @@ class CommentsVC: BaseVC {
                 break
             }
         }, receiveValue: {[weak self] comments in
-            self?.comments = comments
+            self?.handler.indexData = comments
             self?.tableView.reloadData()
         })
-        
     }
 }
 

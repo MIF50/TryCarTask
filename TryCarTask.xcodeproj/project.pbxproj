@@ -25,6 +25,10 @@
 		B51F1B13264D32C900CB723F /* CommentsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B51F1B12264D32C900CB723F /* CommentsVC.swift */; };
 		B51F1B15264D338800CB723F /* CommentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B51F1B14264D338800CB723F /* CommentViewModel.swift */; };
 		B51F1B17264D347F00CB723F /* CommentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = B51F1B16264D347F00CB723F /* CommentHandler.swift */; };
+		B51F1B1B264D4AFF00CB723F /* PostTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B51F1B19264D4AFF00CB723F /* PostTVCell.swift */; };
+		B51F1B1C264D4AFF00CB723F /* PostTVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B51F1B1A264D4AFF00CB723F /* PostTVCell.xib */; };
+		B51F1B20264D705900CB723F /* CommentTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B51F1B1E264D705900CB723F /* CommentTVCell.swift */; };
+		B51F1B21264D705900CB723F /* CommentTVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B51F1B1F264D705900CB723F /* CommentTVCell.xib */; };
 		B5FD83F1264CCADF004666D6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FD83F0264CCADF004666D6 /* AppDelegate.swift */; };
 		B5FD83F3264CCADF004666D6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FD83F2264CCADF004666D6 /* SceneDelegate.swift */; };
 		B5FD83F5264CCADF004666D6 /* PostsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FD83F4264CCADF004666D6 /* PostsVC.swift */; };
@@ -56,6 +60,10 @@
 		B51F1B12264D32C900CB723F /* CommentsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsVC.swift; sourceTree = "<group>"; };
 		B51F1B14264D338800CB723F /* CommentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentViewModel.swift; sourceTree = "<group>"; };
 		B51F1B16264D347F00CB723F /* CommentHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentHandler.swift; sourceTree = "<group>"; };
+		B51F1B19264D4AFF00CB723F /* PostTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTVCell.swift; sourceTree = "<group>"; };
+		B51F1B1A264D4AFF00CB723F /* PostTVCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostTVCell.xib; sourceTree = "<group>"; };
+		B51F1B1E264D705900CB723F /* CommentTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentTVCell.swift; sourceTree = "<group>"; };
+		B51F1B1F264D705900CB723F /* CommentTVCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommentTVCell.xib; sourceTree = "<group>"; };
 		B5FD83ED264CCADF004666D6 /* TryCarTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TryCarTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5FD83F0264CCADF004666D6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B5FD83F2264CCADF004666D6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -109,6 +117,7 @@
 		B51F1AF4264D079700CB723F /* posts */ = {
 			isa = PBXGroup;
 			children = (
+				B51F1B18264D4AB400CB723F /* Cell */,
 				B5FD83F4264CCADF004666D6 /* PostsVC.swift */,
 				B51F1B05264D0C5500CB723F /* PostsViewModel.swift */,
 				B51F1B0F264D301000CB723F /* PostsHandler.swift */,
@@ -174,11 +183,30 @@
 		B51F1B11264D32B700CB723F /* Comments */ = {
 			isa = PBXGroup;
 			children = (
+				B51F1B1D264D6F5300CB723F /* Cell */,
 				B51F1B12264D32C900CB723F /* CommentsVC.swift */,
 				B51F1B14264D338800CB723F /* CommentViewModel.swift */,
 				B51F1B16264D347F00CB723F /* CommentHandler.swift */,
 			);
 			path = Comments;
+			sourceTree = "<group>";
+		};
+		B51F1B18264D4AB400CB723F /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				B51F1B19264D4AFF00CB723F /* PostTVCell.swift */,
+				B51F1B1A264D4AFF00CB723F /* PostTVCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		B51F1B1D264D6F5300CB723F /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				B51F1B1E264D705900CB723F /* CommentTVCell.swift */,
+				B51F1B1F264D705900CB723F /* CommentTVCell.xib */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		B5FD83E4264CCADF004666D6 = {
@@ -308,9 +336,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B51F1B21264D705900CB723F /* CommentTVCell.xib in Resources */,
 				B5FD83FD264CCAE0004666D6 /* LaunchScreen.storyboard in Resources */,
 				B5FD83FA264CCAE0004666D6 /* Assets.xcassets in Resources */,
 				B5FD83F8264CCADF004666D6 /* Main.storyboard in Resources */,
+				B51F1B1C264D4AFF00CB723F /* PostTVCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -368,6 +398,7 @@
 				B51F1AEF264D02CE00CB723F /* PrefManager.swift in Sources */,
 				B5FD83F5264CCADF004666D6 /* PostsVC.swift in Sources */,
 				B51F1B17264D347F00CB723F /* CommentHandler.swift in Sources */,
+				B51F1B20264D705900CB723F /* CommentTVCell.swift in Sources */,
 				B51F1AF8264D07BD00CB723F /* MainTabBarController.swift in Sources */,
 				B51F1B00264D095300CB723F /* BaseViewModel.swift in Sources */,
 				B51F1B04264D0C4B00CB723F /* FavoriteViewModel.swift in Sources */,
@@ -382,6 +413,7 @@
 				B51F1B06264D0C5500CB723F /* PostsViewModel.swift in Sources */,
 				B51F1AF1264D046D00CB723F /* ApiConfig.swift in Sources */,
 				B5FD83F3264CCADF004666D6 /* SceneDelegate.swift in Sources */,
+				B51F1B1B264D4AFF00CB723F /* PostTVCell.swift in Sources */,
 				B51F1B10264D301000CB723F /* PostsHandler.swift in Sources */,
 				B51F1AF3264D04FA00CB723F /* APIPath.swift in Sources */,
 			);
