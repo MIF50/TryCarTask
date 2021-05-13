@@ -11,15 +11,21 @@ import Combine
 class CommentViewModel: BaseViewModel {
     
     var commentsSubject = PassthroughSubject<[Comment],Error>()
+    var internetError = Observable<String>()
     
     func fetchComments(with postId: Int) {
-        service.fetchComments(postId: postId) { result in
-            switch result {
-            case .success(let comments):
-                self.commentsSubject.send(comments)
-            case .failure(let error):
-                self.commentsSubject.send(completion: .failure(error))
+        if Connectivity.isConnectedToInternet {
+            service.fetchComments(postId: postId) { result in
+                switch result {
+                case .success(let comments):
+                    self.commentsSubject.send(comments)
+                case .failure(let error):
+                    self.commentsSubject.send(completion: .failure(error))
+                }
             }
+        } else {
+            internetError.property = "There is no Internet Connection"
         }
+        
     }
 }

@@ -42,7 +42,7 @@ class CommentsVC: BaseVC {
     }
     
     @objc private func didTapFavorite() {
-        
+        #warning("add post to favorite")
     }
     
     override func observeViewModel() {
@@ -58,6 +58,10 @@ class CommentsVC: BaseVC {
             self?.handler.indexData = comments
             self?.tableView.reloadData()
         })
+        
+        viewModel.internetError.observe = { [weak self] message in
+            self?.showAlert(title: "Opps!", message: message)
+        }
     }
 }
 
