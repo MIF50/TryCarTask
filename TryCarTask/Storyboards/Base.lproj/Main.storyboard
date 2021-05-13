@@ -1,24 +1,109 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--PostsVC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PostsVC" id="BYZ-38-t0r" customClass="PostsVC" customModule="TryCarTask" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="dg5-R0-vbl">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="dg5-R0-vbl" secondAttribute="bottom" id="9oe-PU-0PS"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="dg5-R0-vbl" secondAttribute="trailing" id="XXL-9s-46N"/>
+                            <constraint firstItem="dg5-R0-vbl" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Ycc-6y-Zn3"/>
+                            <constraint firstItem="dg5-R0-vbl" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="qUz-J9-IZe"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="g69-dV-kIt"/>
+                    <connections>
+                        <outlet property="tableView" destination="dg5-R0-vbl" id="OKy-tA-Mge"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1330" y="78"/>
+        </scene>
+        <!--CommentsVC-->
+        <scene sceneID="Mlb-ok-veJ">
+            <objects>
+                <viewController storyboardIdentifier="CommentsVC" id="xm1-VZ-uN1" customClass="CommentsVC" customModule="TryCarTask" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Jop-s3-ofL">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="CPi-II-yOz">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="SLs-VZ-4Bs"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="SLs-VZ-4Bs" firstAttribute="bottom" secondItem="CPi-II-yOz" secondAttribute="bottom" id="0HX-n5-PUT"/>
+                            <constraint firstItem="SLs-VZ-4Bs" firstAttribute="trailing" secondItem="CPi-II-yOz" secondAttribute="trailing" id="7IO-p3-6Eb"/>
+                            <constraint firstItem="CPi-II-yOz" firstAttribute="top" secondItem="SLs-VZ-4Bs" secondAttribute="top" id="arj-Ev-oLu"/>
+                            <constraint firstItem="CPi-II-yOz" firstAttribute="leading" secondItem="SLs-VZ-4Bs" secondAttribute="leading" id="mt6-xS-ZzZ"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="CPi-II-yOz" id="jpK-Tz-xY6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eQZ-5i-1NC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1329" y="757"/>
+        </scene>
+        <!--FavoriteVC-->
+        <scene sceneID="p6y-gv-LbX">
+            <objects>
+                <viewController storyboardIdentifier="FavoriteVC" id="c1X-Vk-M2R" customClass="FavoriteVC" customModule="TryCarTask" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="lgn-fH-uuX">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="BP2-Ts-pWe">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="gVs-x9-QzN"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="BP2-Ts-pWe" firstAttribute="top" secondItem="gVs-x9-QzN" secondAttribute="top" id="4dr-g6-TYH"/>
+                            <constraint firstItem="gVs-x9-QzN" firstAttribute="bottom" secondItem="BP2-Ts-pWe" secondAttribute="bottom" id="9pj-FM-tgO"/>
+                            <constraint firstItem="gVs-x9-QzN" firstAttribute="trailing" secondItem="BP2-Ts-pWe" secondAttribute="trailing" id="ULG-ZD-HC2"/>
+                            <constraint firstItem="BP2-Ts-pWe" firstAttribute="leading" secondItem="gVs-x9-QzN" secondAttribute="leading" id="yZm-aI-UxY"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="LzC-Og-cBF"/>
+                    <connections>
+                        <outlet property="tableView" destination="BP2-Ts-pWe" id="9CI-FV-deB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="J6I-Sf-ZV1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2199" y="78"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
