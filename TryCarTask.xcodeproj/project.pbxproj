@@ -29,6 +29,9 @@
 		B51F1B1C264D4AFF00CB723F /* PostTVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B51F1B1A264D4AFF00CB723F /* PostTVCell.xib */; };
 		B51F1B20264D705900CB723F /* CommentTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B51F1B1E264D705900CB723F /* CommentTVCell.swift */; };
 		B51F1B21264D705900CB723F /* CommentTVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B51F1B1F264D705900CB723F /* CommentTVCell.xib */; };
+		B51F1B23264D8C3500CB723F /* Connectivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = B51F1B22264D8C3500CB723F /* Connectivity.swift */; };
+		B51F1B25264D8CB800CB723F /* VC+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = B51F1B24264D8CB800CB723F /* VC+Ext.swift */; };
+		B51F1B27264D8FA200CB723F /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B51F1B26264D8FA200CB723F /* Observable.swift */; };
 		B5FD83F1264CCADF004666D6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FD83F0264CCADF004666D6 /* AppDelegate.swift */; };
 		B5FD83F3264CCADF004666D6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FD83F2264CCADF004666D6 /* SceneDelegate.swift */; };
 		B5FD83F5264CCADF004666D6 /* PostsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FD83F4264CCADF004666D6 /* PostsVC.swift */; };
@@ -64,6 +67,9 @@
 		B51F1B1A264D4AFF00CB723F /* PostTVCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostTVCell.xib; sourceTree = "<group>"; };
 		B51F1B1E264D705900CB723F /* CommentTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentTVCell.swift; sourceTree = "<group>"; };
 		B51F1B1F264D705900CB723F /* CommentTVCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommentTVCell.xib; sourceTree = "<group>"; };
+		B51F1B22264D8C3500CB723F /* Connectivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Connectivity.swift; sourceTree = "<group>"; };
+		B51F1B24264D8CB800CB723F /* VC+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VC+Ext.swift"; sourceTree = "<group>"; };
+		B51F1B26264D8FA200CB723F /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
 		B5FD83ED264CCADF004666D6 /* TryCarTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TryCarTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5FD83F0264CCADF004666D6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B5FD83F2264CCADF004666D6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -155,6 +161,9 @@
 			isa = PBXGroup;
 			children = (
 				B51F1AFB264D090400CB723F /* Storyboard+Ext.swift */,
+				B51F1B22264D8C3500CB723F /* Connectivity.swift */,
+				B51F1B24264D8CB800CB723F /* VC+Ext.swift */,
+				B51F1B26264D8FA200CB723F /* Observable.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -393,7 +402,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B51F1B27264D8FA200CB723F /* Observable.swift in Sources */,
 				B51F1AFC264D090400CB723F /* Storyboard+Ext.swift in Sources */,
+				B51F1B25264D8CB800CB723F /* VC+Ext.swift in Sources */,
 				B51F1AFE264D092B00CB723F /* BaseVC.swift in Sources */,
 				B51F1AEF264D02CE00CB723F /* PrefManager.swift in Sources */,
 				B5FD83F5264CCADF004666D6 /* PostsVC.swift in Sources */,
@@ -413,6 +424,7 @@
 				B51F1B06264D0C5500CB723F /* PostsViewModel.swift in Sources */,
 				B51F1AF1264D046D00CB723F /* ApiConfig.swift in Sources */,
 				B5FD83F3264CCADF004666D6 /* SceneDelegate.swift in Sources */,
+				B51F1B23264D8C3500CB723F /* Connectivity.swift in Sources */,
 				B51F1B1B264D4AFF00CB723F /* PostTVCell.swift in Sources */,
 				B51F1B10264D301000CB723F /* PostsHandler.swift in Sources */,
 				B51F1AF3264D04FA00CB723F /* APIPath.swift in Sources */,

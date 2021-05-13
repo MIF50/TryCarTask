@@ -49,6 +49,10 @@ class PostsVC: BaseVC {
                 self?.handler.indexData = newPosts
                 self?.tableView.reloadData()
             })
+        
+        viewModel.internetError.observe = { [weak self] message in
+            self?.showAlert(title: "Opps!", message: message)
+        }
     }
 }
 
