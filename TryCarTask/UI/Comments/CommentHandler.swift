@@ -18,6 +18,7 @@ class CommentHandler: NSObject, UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "CommentTVCell", for: indexPath) as! CommentTVCell
+        cell.selectionStyle = .none
         cell.comment = indexData[indexPath.row]
         return cell
     }

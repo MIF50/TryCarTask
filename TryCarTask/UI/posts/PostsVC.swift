@@ -45,14 +45,22 @@ class PostsVC: BaseVC {
                 case .finished:
                     break
                 }
-            },receiveValue: { [weak self]  newPosts in
-                self?.handler.indexData = newPosts
-                self?.tableView.reloadData()
+            },receiveValue: { [weak self]  posts in
+                self?.refreshTablView(with: posts)
             })
+        
+        viewModel.postsCached.observe = {[weak self]  posts in
+            self?.refreshTablView(with: posts)
+        }
         
         viewModel.internetError.observe = { [weak self] message in
             self?.showAlert(title: "Opps!", message: message)
         }
+    }
+    
+    private func refreshTablView(with posts: [Post]) {
+        handler.indexData = posts
+        tableView.reloadData()
     }
 }
 

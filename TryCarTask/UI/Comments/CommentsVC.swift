@@ -42,7 +42,7 @@ class CommentsVC: BaseVC {
     }
     
     @objc private func didTapFavorite() {
-        #warning("add post to favorite")
+        viewModel.addPostToFavorite(postId: postId)
     }
     
     override func observeViewModel() {

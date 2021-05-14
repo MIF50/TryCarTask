@@ -10,6 +10,7 @@ import Combine
 
 class CommentViewModel: BaseViewModel {
     
+    // MARK:- vars
     var commentsSubject = PassthroughSubject<[Comment],Error>()
     var internetError = Observable<String>()
     
@@ -26,6 +27,9 @@ class CommentViewModel: BaseViewModel {
         } else {
             internetError.property = "There is no Internet Connection"
         }
-        
+    }
+    
+    func addPostToFavorite(postId: Int) {
+        manager.updatePost(postId: postId, isFavorite: true)
     }
 }

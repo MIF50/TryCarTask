@@ -7,12 +7,13 @@
 
 import Foundation
 
-
 class BaseViewModel {
     
     let service: APIServices!
+    let manager: PostManager
     
     init() {
         service = APIServices.shared
+        manager = PostManager.shared
     }
 }

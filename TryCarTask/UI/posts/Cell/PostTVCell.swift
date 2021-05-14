@@ -36,16 +36,11 @@ class PostTVCell: UITableViewCell {
         ImageUser.layer.borderWidth = 1
         ImageUser.layer.borderColor = UIColor.lightGray.cgColor
     }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
-    
 }
 
+// MARK:- CreatePostTVCell
 extension PostTVCell {
+    
     static func create() -> UINib {
         return UINib(nibName: "PostTVCell", bundle: nil)
     }

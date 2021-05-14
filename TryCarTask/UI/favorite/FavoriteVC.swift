@@ -9,21 +9,43 @@ import UIKit
 
 class FavoriteVC: BaseVC {
     
+    // MARK:- Outlet
     @IBOutlet var tableView: UITableView!
     
     // MARK:- ViewModel
     fileprivate let viewModel = FavoriteViewModel()
     
-    // MARK:- vars
-    private var postId = 1
+    // MARK:- handler
+    fileprivate let handler = PostsHandler()
     
     override func setupView() {
         super.setupView()
+        configureTableView()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidLoad()
+        viewModel.getFavorites()
+    }
+    
+    private func configureTableView() {
+        /// regsister
+        tableView.register(PostTVCell.create(), forCellReuseIdentifier: "PostTVCell")
+        /// delegate
+        tableView.dataSource = handler
+        tableView.delegate = handler
+        // action
+        handler.didTapPost = {[weak self] indexPath, postId in
+            self?.navigationController?.pushViewController(CommentsVC.create(with: postId), animated: true)
+        }
     }
     
     override func observeViewModel() {
         super.observeViewModel()
-       
+        viewModel.posts.observe = { [weak self] posts in
+            self?.handler.indexData = posts
+            self?.tableView.reloadData()
+        }
     }
 }
 
