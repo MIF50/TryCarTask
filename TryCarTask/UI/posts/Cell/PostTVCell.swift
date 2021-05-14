@@ -38,10 +38,6 @@ class PostTVCell: UITableViewCell {
     }
 }
 
-// MARK:- CreatePostTVCell
-extension PostTVCell {
+extension PostTVCell: NibLoadableView, ReusableView {
     
-    static func create() -> UINib {
-        return UINib(nibName: "PostTVCell", bundle: nil)
-    }
 }

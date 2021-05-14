@@ -18,7 +18,7 @@ class PostsHandler: NSObject,UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "PostTVCell", for: indexPath) as! PostTVCell
+        let cell = tableView.dequeueReusableCell(for: indexPath) as PostTVCell
         cell.clipsToBounds = true
         cell.post = indexData[indexPath.row]
         return cell

@@ -14,9 +14,3 @@ struct Connectivity {
       return self.sharedInstance.isReachable
     }
 }
-
-// if Connectivity.isConnectedToInternet {
-//print("Connected")
-//} else {
-//print("No Internet")
-//}

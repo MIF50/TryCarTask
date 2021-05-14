@@ -26,7 +26,7 @@ class PostsVC: BaseVC {
     private func configureTableView() {
         tableView.contentInset = .init(top: 16, left: 0, bottom: 16, right: 0)
         /// register cell
-        tableView.register(PostTVCell.create(), forCellReuseIdentifier: "PostTVCell")
+        tableView.register(PostTVCell.self)
         /// delegate
         tableView.dataSource = handler
         tableView.delegate = handler

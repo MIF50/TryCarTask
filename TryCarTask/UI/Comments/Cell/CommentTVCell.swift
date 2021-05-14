@@ -40,9 +40,5 @@ class CommentTVCell: UITableViewCell {
 }
 
 // MARK:- CreateCommentTVCell
-extension CommentTVCell {
-    
-    static func create() -> UINib {
-        return UINib(nibName: "CommentTVCell", bundle: nil)
-    }
+extension CommentTVCell: NibLoadableView,ReusableView {
 }

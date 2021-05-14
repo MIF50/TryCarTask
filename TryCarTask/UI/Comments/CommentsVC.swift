@@ -31,7 +31,7 @@ class CommentsVC: BaseVC {
     private func configureTableView() {
         tableView.contentInset = .init(top: 8, left: 0, bottom: 8, right: 0)
         /// register cell
-        tableView.register(CommentTVCell.create(), forCellReuseIdentifier: "CommentTVCell")
+        tableView.register(CommentTVCell.self)
         /// delegate
         tableView.dataSource = handler
         tableView.delegate = handler

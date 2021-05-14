@@ -6,10 +6,12 @@
 //
 
 import Foundation
+import RealmSwift
 
-struct Post: Codable {
-    let userId: Int
-    let id: Int
-    let title: String
-    let body: String
+class Post: Object, Codable {
+    @objc dynamic var userId: Int = 0
+    @objc dynamic var id: Int = 0
+    @objc dynamic var title: String = ""
+    @objc dynamic var body: String = ""
+//    @objc dynamic var isFavorite: Bool = false
 }

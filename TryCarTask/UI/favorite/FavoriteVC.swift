@@ -30,7 +30,7 @@ class FavoriteVC: BaseVC {
     
     private func configureTableView() {
         /// regsister
-        tableView.register(PostTVCell.create(), forCellReuseIdentifier: "PostTVCell")
+        tableView.register(PostTVCell.self)
         /// delegate
         tableView.dataSource = handler
         tableView.delegate = handler
