@@ -14,10 +14,13 @@ class PostViewModel: BaseViewModel {
     var postsSubject = PassthroughSubject<[Post],Error>()
     var internetError = Observable<String>()
     var postsCached = Observable<[Post]>()
+    var loading = Observable<Bool>()
 
     func fetchPosts() {
+        loading.property = true
         if Connectivity.isConnectedToInternet {
             service.fetchPosts { result in
+                self.loading.property = false
                 switch result {
                 case .success(let posts):
                     self.manager.cachePosts(posts: posts)
@@ -27,6 +30,7 @@ class PostViewModel: BaseViewModel {
                 }
             }
         } else {
+            loading.property = false
             internetError.property = "There is No Internet Connection"
             postsCached.property = manager.getPosts()
         }

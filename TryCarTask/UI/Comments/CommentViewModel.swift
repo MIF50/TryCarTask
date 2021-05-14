@@ -30,6 +30,6 @@ class CommentViewModel: BaseViewModel {
     }
     
     func addPostToFavorite(postId: Int) {
-        manager.updatePost(postId: postId, isFavorite: true)
+        manager.updatePost(postId: postId)
     }
 }

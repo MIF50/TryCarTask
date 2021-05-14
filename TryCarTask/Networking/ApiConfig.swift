@@ -41,5 +41,4 @@ final class APIConfig {
         }
         return URL(string: urlStr)!
     }
-    
 }

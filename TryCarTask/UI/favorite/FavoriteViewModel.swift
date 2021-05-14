@@ -13,6 +13,6 @@ class FavoriteViewModel: BaseViewModel {
     var posts = Observable<[Post]>()
     
     func getFavorites() {
-        posts.property = PostManager.shared.getFavorite()
+        posts.property = manager.getFavorite()
     }
 }

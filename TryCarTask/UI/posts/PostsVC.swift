@@ -37,24 +37,34 @@ class PostsVC: BaseVC {
     }
     
     override func observeViewModel() {
+        /// posts from api
         subscriber = viewModel.postsSubject
             .sink(receiveCompletion: { resultCompetion in
                 switch resultCompetion {
                 case .failure(let error):
                     print("Error: \(error)")
+                    self.showEmptyStateView(with: error.localizedDescription, in: self.view)
                 case .finished:
                     break
                 }
             },receiveValue: { [weak self]  posts in
                 self?.refreshTablView(with: posts)
             })
-        
+        /// caching posts
         viewModel.postsCached.observe = {[weak self]  posts in
             self?.refreshTablView(with: posts)
         }
-        
+        /// error internet
         viewModel.internetError.observe = { [weak self] message in
             self?.showAlert(title: "Opps!", message: message)
+        }
+        /// loading
+        viewModel.loading.observe = { [weak self] isloading in
+            if  isloading {
+                self?.showLoadingView()
+            } else {
+                self?.hideLoadingView()
+            }
         }
     }
     

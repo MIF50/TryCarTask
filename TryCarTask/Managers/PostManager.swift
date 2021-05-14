@@ -8,7 +8,6 @@
 import Foundation
 import RealmSwift
 
-
 class Favorites: Object {
     let list = List<Int>()
 }
@@ -37,7 +36,7 @@ class PostManager {
         return data.list.toArray()
     }
     
-    func updatePost(postId: Int,isFavorite: Bool) {
+    func updatePost(postId: Int) {
         if let favorites = readFavorites() {
             if favorites.list.contains(postId) { return }
             try! realm.write {

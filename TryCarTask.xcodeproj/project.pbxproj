@@ -35,6 +35,9 @@
 		B51F1B29264D9F6A00CB723F /* PostManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B51F1B28264D9F6A00CB723F /* PostManager.swift */; };
 		B51F1B2B264DB40100CB723F /* Codable+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = B51F1B2A264DB40100CB723F /* Codable+Ext.swift */; };
 		B51F1B2D264E56B500CB723F /* UINib+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = B51F1B2C264E56B500CB723F /* UINib+Ext.swift */; };
+		B51F1B2F264E65C600CB723F /* UIView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = B51F1B2E264E65C600CB723F /* UIView+Ext.swift */; };
+		B51F1B32264E66AA00CB723F /* TCEmptyStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B51F1B31264E66AA00CB723F /* TCEmptyStateView.swift */; };
+		B51F1B34264E66CD00CB723F /* TCTitleLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B51F1B33264E66CD00CB723F /* TCTitleLabel.swift */; };
 		B5FD83F1264CCADF004666D6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FD83F0264CCADF004666D6 /* AppDelegate.swift */; };
 		B5FD83F3264CCADF004666D6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FD83F2264CCADF004666D6 /* SceneDelegate.swift */; };
 		B5FD83F5264CCADF004666D6 /* PostsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FD83F4264CCADF004666D6 /* PostsVC.swift */; };
@@ -76,6 +79,9 @@
 		B51F1B28264D9F6A00CB723F /* PostManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostManager.swift; sourceTree = "<group>"; };
 		B51F1B2A264DB40100CB723F /* Codable+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Codable+Ext.swift"; sourceTree = "<group>"; };
 		B51F1B2C264E56B500CB723F /* UINib+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINib+Ext.swift"; sourceTree = "<group>"; };
+		B51F1B2E264E65C600CB723F /* UIView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Ext.swift"; sourceTree = "<group>"; };
+		B51F1B31264E66AA00CB723F /* TCEmptyStateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCEmptyStateView.swift; sourceTree = "<group>"; };
+		B51F1B33264E66CD00CB723F /* TCTitleLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCTitleLabel.swift; sourceTree = "<group>"; };
 		B5FD83ED264CCADF004666D6 /* TryCarTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TryCarTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5FD83F0264CCADF004666D6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B5FD83F2264CCADF004666D6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -173,6 +179,7 @@
 				B51F1B26264D8FA200CB723F /* Observable.swift */,
 				B51F1B2A264DB40100CB723F /* Codable+Ext.swift */,
 				B51F1B2C264E56B500CB723F /* UINib+Ext.swift */,
+				B51F1B2E264E65C600CB723F /* UIView+Ext.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -227,6 +234,15 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
+		B51F1B30264E668C00CB723F /* Custom Views */ = {
+			isa = PBXGroup;
+			children = (
+				B51F1B31264E66AA00CB723F /* TCEmptyStateView.swift */,
+				B51F1B33264E66CD00CB723F /* TCTitleLabel.swift */,
+			);
+			path = "Custom Views";
+			sourceTree = "<group>";
+		};
 		B5FD83E4264CCADF004666D6 = {
 			isa = PBXGroup;
 			children = (
@@ -256,6 +272,7 @@
 				B51F1AE7264D01E700CB723F /* Networking */,
 				B5FD8406264CCB41004666D6 /* Storyboards */,
 				B51F1B0E264D2F4C00CB723F /* UI */,
+				B51F1B30264E668C00CB723F /* Custom Views */,
 				B5FD83FE264CCAE0004666D6 /* Info.plist */,
 			);
 			path = TryCarTask;
@@ -413,9 +430,11 @@
 			files = (
 				B51F1B27264D8FA200CB723F /* Observable.swift in Sources */,
 				B51F1AFC264D090400CB723F /* Storyboard+Ext.swift in Sources */,
+				B51F1B2F264E65C600CB723F /* UIView+Ext.swift in Sources */,
 				B51F1B25264D8CB800CB723F /* VC+Ext.swift in Sources */,
 				B51F1AFE264D092B00CB723F /* BaseVC.swift in Sources */,
 				B51F1AEF264D02CE00CB723F /* PrefManager.swift in Sources */,
+				B51F1B32264E66AA00CB723F /* TCEmptyStateView.swift in Sources */,
 				B51F1B29264D9F6A00CB723F /* PostManager.swift in Sources */,
 				B5FD83F5264CCADF004666D6 /* PostsVC.swift in Sources */,
 				B51F1B17264D347F00CB723F /* CommentHandler.swift in Sources */,
@@ -437,6 +456,7 @@
 				B5FD83F3264CCADF004666D6 /* SceneDelegate.swift in Sources */,
 				B51F1B23264D8C3500CB723F /* Connectivity.swift in Sources */,
 				B51F1B1B264D4AFF00CB723F /* PostTVCell.swift in Sources */,
+				B51F1B34264E66CD00CB723F /* TCTitleLabel.swift in Sources */,
 				B51F1B10264D301000CB723F /* PostsHandler.swift in Sources */,
 				B51F1AF3264D04FA00CB723F /* APIPath.swift in Sources */,
 				B51F1B2D264E56B500CB723F /* UINib+Ext.swift in Sources */,

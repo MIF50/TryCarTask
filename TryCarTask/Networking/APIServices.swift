@@ -37,5 +37,4 @@ class APIServices: APIServicesProtocol {
             completion: completion
         )
     }
-    
 }

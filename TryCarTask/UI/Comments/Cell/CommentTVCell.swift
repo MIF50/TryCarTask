@@ -40,5 +40,4 @@ class CommentTVCell: UITableViewCell {
 }
 
 // MARK:- CreateCommentTVCell
-extension CommentTVCell: NibLoadableView,ReusableView {
-}
+extension CommentTVCell: NibLoadableView,ReusableView { }

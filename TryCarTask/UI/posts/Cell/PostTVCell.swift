@@ -38,6 +38,5 @@ class PostTVCell: UITableViewCell {
     }
 }
 
-extension PostTVCell: NibLoadableView, ReusableView {
-    
-}
+// MARK:- 
+extension PostTVCell: NibLoadableView, ReusableView { }
