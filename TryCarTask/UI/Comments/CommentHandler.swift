@@ -12,6 +12,14 @@ class CommentHandler: NSObject, UITableViewDataSource, UITableViewDelegate {
     
     var indexData = [Comment]()
     
+    func setup(tableView: UITableView) {
+        /// register cell
+        tableView.register(CommentTVCell.self)
+        /// delegate
+        tableView.dataSource = self
+        tableView.delegate = self
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return indexData.count
     }

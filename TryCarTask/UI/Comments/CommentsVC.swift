@@ -30,11 +30,7 @@ class CommentsVC: BaseVC {
     
     private func configureTableView() {
         tableView.contentInset = .init(top: 8, left: 0, bottom: 8, right: 0)
-        /// register cell
-        tableView.register(CommentTVCell.self)
-        /// delegate
-        tableView.dataSource = handler
-        tableView.delegate = handler
+        handler.setup(tableView: tableView)
     }
     
     private func configureNavigationBar() {

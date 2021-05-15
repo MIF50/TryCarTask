@@ -13,6 +13,14 @@ class PostsHandler: NSObject,UITableViewDataSource, UITableViewDelegate {
     var indexData = [Post]()
     var didTapPost:((IndexPath,Int)->Void)?
     
+    func setup(tableView: UITableView) {
+        /// register cell
+        tableView.register(PostTVCell.self)
+        /// delegate
+        tableView.dataSource = self
+        tableView.delegate = self
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return indexData.count
     }

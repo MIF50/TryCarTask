@@ -29,11 +29,7 @@ class FavoriteVC: BaseVC {
     }
     
     private func configureTableView() {
-        /// regsister
-        tableView.register(PostTVCell.self)
-        /// delegate
-        tableView.dataSource = handler
-        tableView.delegate = handler
+        handler.setup(tableView: tableView)
         // action
         handler.didTapPost = {[weak self] indexPath, postId in
             self?.navigationController?.pushViewController(CommentsVC.create(with: postId), animated: true)
