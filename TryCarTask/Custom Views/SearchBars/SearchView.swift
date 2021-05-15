@@ -92,9 +92,9 @@ class SearchView: UIView {
     }
 }
 
+// MARK:- UITextFieldDelegate
 extension SearchView: UITextFieldDelegate {
     
-    // MARK:- UITextFieldDelegate
     func textFieldDidBeginEditing(_ textField: UITextField) {
         self.delegate?.didBeginEditing()
     }
