@@ -17,27 +17,37 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="dg5-R0-vbl">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <rect key="frame" x="0.0" y="102" width="414" height="760"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Z5j-Gc-E2Q" customClass="SearchView" customModule="TryCarTask" customModuleProvider="target">
+                                <rect key="frame" x="8" y="50" width="398" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="tCJ-kn-m4J"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="dg5-R0-vbl" secondAttribute="bottom" id="9oe-PU-0PS"/>
+                            <constraint firstItem="dg5-R0-vbl" firstAttribute="top" secondItem="Z5j-Gc-E2Q" secondAttribute="bottom" constant="12" id="BS6-T0-Lgq"/>
+                            <constraint firstItem="Z5j-Gc-E2Q" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="6" id="RqB-IO-1PX"/>
+                            <constraint firstItem="Z5j-Gc-E2Q" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="T2T-uN-3cv"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="dg5-R0-vbl" secondAttribute="trailing" id="XXL-9s-46N"/>
-                            <constraint firstItem="dg5-R0-vbl" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Ycc-6y-Zn3"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Z5j-Gc-E2Q" secondAttribute="trailing" constant="8" id="oV6-5J-a48"/>
                             <constraint firstItem="dg5-R0-vbl" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="qUz-J9-IZe"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="g69-dV-kIt"/>
                     <connections>
+                        <outlet property="searchView" destination="Z5j-Gc-E2Q" id="fA6-TM-Mbc"/>
                         <outlet property="tableView" destination="dg5-R0-vbl" id="OKy-tA-Mge"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1330" y="78"/>
+            <point key="canvasLocation" x="1328.985507246377" y="77.678571428571431"/>
         </scene>
         <!--CommentsVC-->
         <scene sceneID="Mlb-ok-veJ">

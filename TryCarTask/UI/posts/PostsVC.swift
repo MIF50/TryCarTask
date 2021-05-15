@@ -11,6 +11,7 @@ class PostsVC: BaseVC {
     
     // MARK:- Outlet
     @IBOutlet var tableView: UITableView!
+    @IBOutlet var searchView: SearchView!
     
     // MARK:- ViewModel
     fileprivate let viewModel = PostViewModel()
@@ -19,12 +20,17 @@ class PostsVC: BaseVC {
     fileprivate let handler = PostsHandler()
     
     override func setupView() {
+        configureSearchView()
         configureTableView()
         viewModel.fetchPosts()
     }
     
+    private func configureSearchView() {
+        searchView.setup(placeholder: "Search", delegate: self)
+    }
+    
     private func configureTableView() {
-        tableView.contentInset = .init(top: 16, left: 0, bottom: 16, right: 0)
+        tableView.contentInset = .init(top: 0, left: 0, bottom: 16, right: 0)
         handler.setup(tableView: tableView)
         /// Action in cell
         handler.didTapPost = { [weak self] _ , postId in
@@ -47,7 +53,7 @@ class PostsVC: BaseVC {
                 self?.refreshTablView(with: posts)
             })
         /// caching posts
-        viewModel.postsCached.observe = {[weak self]  posts in
+        viewModel.liveDataPosts.observe = {[weak self]  posts in
             self?.refreshTablView(with: posts)
         }
         /// error internet
@@ -62,11 +68,39 @@ class PostsVC: BaseVC {
                 self?.hideLoadingView()
             }
         }
+        /// loading search
+        viewModel.loadingSearch.observe = {[weak self] isLoading in
+            self?.searchView.isLoading = isLoading
+        }
     }
     
     private func refreshTablView(with posts: [Post]) {
         handler.indexData = posts
-        tableView.reloadData()
+        self.tableView.layer.add(easeInEaseOutAnimationTableView(), forKey: "UITableViewReloadDataAnimationKey")
+        self.tableView.reloadData()
+    }
+    
+    // MARK:- Animation EaseInEaseOut insert row In TableView
+    private func easeInEaseOutAnimationTableView()->CATransition {
+        let transition = CATransition()
+        transition.type = CATransitionType.push
+        transition.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeInEaseOut)
+        transition.fillMode = CAMediaTimingFillMode.forwards
+        transition.duration = 0.5
+        transition.subtype = CATransitionSubtype.fromTop
+        return transition
+    }
+}
+
+// MARK:- SearchViewDelegate
+extension PostsVC : SearchViewDelegate {
+    
+    func onSearchWithDelay(text: String) {
+        viewModel.search(query: text)
+    }
+    
+    func onSearchCleared() {
+        viewModel.onSearchCleared()
     }
 }
 

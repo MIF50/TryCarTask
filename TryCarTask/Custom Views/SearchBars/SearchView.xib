@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SearchView" customModule="TryCarTask" customModuleProvider="target">
+            <connections>
+                <outlet property="clearSearchButton" destination="lWe-oD-Glf" id="K8x-ZC-dgu"/>
+                <outlet property="contentView" destination="iN0-l3-epB" id="H8J-Tz-ivt"/>
+                <outlet property="loadingIndicator" destination="358-zg-aiJ" id="srH-4z-vo2"/>
+                <outlet property="searchIcon" destination="Krw-V3-Xyl" id="YHm-fG-aku"/>
+                <outlet property="searchTextField" destination="QS3-De-naf" id="vCF-X5-N0O"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="CardView" customModule="TryCarTask" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="505" height="100"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="qCf-Sz-cUi">
+                    <rect key="frame" x="12" y="0.0" width="481" height="66"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="rS6-N7-VZk">
+                            <rect key="frame" x="0.0" y="0.0" width="16" height="66"/>
+                            <subviews>
+                                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="358-zg-aiJ">
+                                    <rect key="frame" x="0.0" y="0.0" width="16" height="20"/>
+                                </activityIndicatorView>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="magnifyingglass" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Krw-V3-Xyl">
+                                    <rect key="frame" x="0.0" y="21" width="16" height="44"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="16" id="zhe-MY-iT3"/>
+                                    </constraints>
+                                </imageView>
+                            </subviews>
+                        </stackView>
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Search" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QS3-De-naf">
+                            <rect key="frame" x="28" y="0.0" width="421" height="66"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="xmark.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="lWe-oD-Glf">
+                            <rect key="frame" x="461" y="0.5" width="20" height="65"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="20" id="mEf-AY-4uC"/>
+                            </constraints>
+                        </imageView>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="qCf-Sz-cUi" secondAttribute="trailing" constant="12" id="6oF-gN-2bw"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="qCf-Sz-cUi" secondAttribute="bottom" id="Azx-us-OoC"/>
+                <constraint firstItem="qCf-Sz-cUi" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="JQ1-zo-8Iu"/>
+                <constraint firstItem="qCf-Sz-cUi" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="12" id="sLq-Hf-V7a"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="number" keyPath="sRadius">
+                    <real key="value" value="0.0"/>
+                </userDefinedRuntimeAttribute>
+                <userDefinedRuntimeAttribute type="number" keyPath="cRadius">
+                    <real key="value" value="8"/>
+                </userDefinedRuntimeAttribute>
+            </userDefinedRuntimeAttributes>
+            <point key="canvasLocation" x="80.434782608695656" y="-268.52678571428572"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="magnifyingglass" catalog="system" width="128" height="115"/>
+        <image name="xmark.circle.fill" catalog="system" width="128" height="121"/>
+    </resources>
+</document>

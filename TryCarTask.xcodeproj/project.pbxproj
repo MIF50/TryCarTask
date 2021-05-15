@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B501F8662650313900C87669 /* Debounce.swift in Sources */ = {isa = PBXBuildFile; fileRef = B501F8652650313900C87669 /* Debounce.swift */; };
+		B501F86A2650517C00C87669 /* DispatchLevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B501F8692650517C00C87669 /* DispatchLevel.swift */; };
 		B51F1AE9264D020000CB723F /* APIServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = B51F1AE8264D020000CB723F /* APIServices.swift */; };
 		B51F1AEB264D026900CB723F /* NetworkingClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = B51F1AEA264D026900CB723F /* NetworkingClient.swift */; };
 		B51F1AEF264D02CE00CB723F /* PrefManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B51F1AEE264D02CE00CB723F /* PrefManager.swift */; };
@@ -38,6 +40,9 @@
 		B51F1B2F264E65C600CB723F /* UIView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = B51F1B2E264E65C600CB723F /* UIView+Ext.swift */; };
 		B51F1B32264E66AA00CB723F /* TCEmptyStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B51F1B31264E66AA00CB723F /* TCEmptyStateView.swift */; };
 		B51F1B34264E66CD00CB723F /* TCTitleLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B51F1B33264E66CD00CB723F /* TCTitleLabel.swift */; };
+		B5478D05265004F200A973EB /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5478D04265004F200A973EB /* SearchView.swift */; };
+		B5478D0B2650080200A973EB /* SearchView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B5478D0A2650080200A973EB /* SearchView.xib */; };
+		B5478D0D26500C6500A973EB /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5478D0C26500C6500A973EB /* CardView.swift */; };
 		B5FD83F1264CCADF004666D6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FD83F0264CCADF004666D6 /* AppDelegate.swift */; };
 		B5FD83F3264CCADF004666D6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FD83F2264CCADF004666D6 /* SceneDelegate.swift */; };
 		B5FD83F5264CCADF004666D6 /* PostsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FD83F4264CCADF004666D6 /* PostsVC.swift */; };
@@ -51,6 +56,8 @@
 		0693D8D02FCD30DE67D72D01 /* Pods-TryCarTask.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TryCarTask.release.xcconfig"; path = "Target Support Files/Pods-TryCarTask/Pods-TryCarTask.release.xcconfig"; sourceTree = "<group>"; };
 		83F84D2984C5D5FC3C01ECE1 /* Pods_TryCarTask.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TryCarTask.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D05260E9F15D1CF30F507CC /* Pods-TryCarTask.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TryCarTask.debug.xcconfig"; path = "Target Support Files/Pods-TryCarTask/Pods-TryCarTask.debug.xcconfig"; sourceTree = "<group>"; };
+		B501F8652650313900C87669 /* Debounce.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Debounce.swift; sourceTree = "<group>"; };
+		B501F8692650517C00C87669 /* DispatchLevel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DispatchLevel.swift; sourceTree = "<group>"; };
 		B51F1AE8264D020000CB723F /* APIServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIServices.swift; sourceTree = "<group>"; };
 		B51F1AEA264D026900CB723F /* NetworkingClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingClient.swift; sourceTree = "<group>"; };
 		B51F1AEE264D02CE00CB723F /* PrefManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrefManager.swift; sourceTree = "<group>"; };
@@ -82,6 +89,9 @@
 		B51F1B2E264E65C600CB723F /* UIView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Ext.swift"; sourceTree = "<group>"; };
 		B51F1B31264E66AA00CB723F /* TCEmptyStateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCEmptyStateView.swift; sourceTree = "<group>"; };
 		B51F1B33264E66CD00CB723F /* TCTitleLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCTitleLabel.swift; sourceTree = "<group>"; };
+		B5478D04265004F200A973EB /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
+		B5478D0A2650080200A973EB /* SearchView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchView.xib; sourceTree = "<group>"; };
+		B5478D0C26500C6500A973EB /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		B5FD83ED264CCADF004666D6 /* TryCarTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TryCarTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5FD83F0264CCADF004666D6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B5FD83F2264CCADF004666D6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -111,6 +121,17 @@
 				0693D8D02FCD30DE67D72D01 /* Pods-TryCarTask.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		B501F8642650312800C87669 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				B51F1B26264D8FA200CB723F /* Observable.swift */,
+				B51F1B22264D8C3500CB723F /* Connectivity.swift */,
+				B501F8652650313900C87669 /* Debounce.swift */,
+				B501F8692650517C00C87669 /* DispatchLevel.swift */,
+			);
+			path = Helper;
 			sourceTree = "<group>";
 		};
 		B51F1AE7264D01E700CB723F /* Networking */ = {
@@ -174,9 +195,7 @@
 			isa = PBXGroup;
 			children = (
 				B51F1AFB264D090400CB723F /* Storyboard+Ext.swift */,
-				B51F1B22264D8C3500CB723F /* Connectivity.swift */,
 				B51F1B24264D8CB800CB723F /* VC+Ext.swift */,
-				B51F1B26264D8FA200CB723F /* Observable.swift */,
 				B51F1B2A264DB40100CB723F /* Codable+Ext.swift */,
 				B51F1B2C264E56B500CB723F /* UINib+Ext.swift */,
 				B51F1B2E264E65C600CB723F /* UIView+Ext.swift */,
@@ -237,10 +256,21 @@
 		B51F1B30264E668C00CB723F /* Custom Views */ = {
 			isa = PBXGroup;
 			children = (
+				B5478D012650048A00A973EB /* SearchBars */,
 				B51F1B31264E66AA00CB723F /* TCEmptyStateView.swift */,
 				B51F1B33264E66CD00CB723F /* TCTitleLabel.swift */,
+				B5478D0C26500C6500A973EB /* CardView.swift */,
 			);
 			path = "Custom Views";
+			sourceTree = "<group>";
+		};
+		B5478D012650048A00A973EB /* SearchBars */ = {
+			isa = PBXGroup;
+			children = (
+				B5478D04265004F200A973EB /* SearchView.swift */,
+				B5478D0A2650080200A973EB /* SearchView.xib */,
+			);
+			path = SearchBars;
 			sourceTree = "<group>";
 		};
 		B5FD83E4264CCADF004666D6 = {
@@ -264,6 +294,7 @@
 		B5FD83EF264CCADF004666D6 /* TryCarTask */ = {
 			isa = PBXGroup;
 			children = (
+				B501F8642650312800C87669 /* Helper */,
 				B5FD8404264CCB0C004666D6 /* Supporting Files */,
 				B51F1AFA264D08F000CB723F /* Extensions */,
 				B51F1AED264D02AD00CB723F /* Managers */,
@@ -373,6 +404,7 @@
 			files = (
 				B51F1B21264D705900CB723F /* CommentTVCell.xib in Resources */,
 				B5FD83FD264CCAE0004666D6 /* LaunchScreen.storyboard in Resources */,
+				B5478D0B2650080200A973EB /* SearchView.xib in Resources */,
 				B5FD83FA264CCAE0004666D6 /* Assets.xcassets in Resources */,
 				B5FD83F8264CCADF004666D6 /* Main.storyboard in Resources */,
 				B51F1B1C264D4AFF00CB723F /* PostTVCell.xib in Resources */,
@@ -438,6 +470,7 @@
 				B51F1B29264D9F6A00CB723F /* PostManager.swift in Sources */,
 				B5FD83F5264CCADF004666D6 /* PostsVC.swift in Sources */,
 				B51F1B17264D347F00CB723F /* CommentHandler.swift in Sources */,
+				B5478D05265004F200A973EB /* SearchView.swift in Sources */,
 				B51F1B20264D705900CB723F /* CommentTVCell.swift in Sources */,
 				B51F1AF8264D07BD00CB723F /* MainTabBarController.swift in Sources */,
 				B51F1B00264D095300CB723F /* BaseViewModel.swift in Sources */,
@@ -453,13 +486,16 @@
 				B51F1B0B264D0F2800CB723F /* Post.swift in Sources */,
 				B51F1B06264D0C5500CB723F /* PostsViewModel.swift in Sources */,
 				B51F1AF1264D046D00CB723F /* ApiConfig.swift in Sources */,
+				B501F86A2650517C00C87669 /* DispatchLevel.swift in Sources */,
 				B5FD83F3264CCADF004666D6 /* SceneDelegate.swift in Sources */,
 				B51F1B23264D8C3500CB723F /* Connectivity.swift in Sources */,
 				B51F1B1B264D4AFF00CB723F /* PostTVCell.swift in Sources */,
 				B51F1B34264E66CD00CB723F /* TCTitleLabel.swift in Sources */,
 				B51F1B10264D301000CB723F /* PostsHandler.swift in Sources */,
 				B51F1AF3264D04FA00CB723F /* APIPath.swift in Sources */,
+				B5478D0D26500C6500A973EB /* CardView.swift in Sources */,
 				B51F1B2D264E56B500CB723F /* UINib+Ext.swift in Sources */,
+				B501F8662650313900C87669 /* Debounce.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
