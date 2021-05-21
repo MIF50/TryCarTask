@@ -7,7 +7,7 @@
 
 import UIKit
 
-class CommentTVCell: UITableViewCell {
+class CommentTVCell: BaseTableViewCell {
     
     var comment: Comment! {
         didSet {
@@ -36,8 +36,4 @@ class CommentTVCell: UITableViewCell {
         imageUser.layer.borderWidth = 1
         imageUser.layer.borderColor = UIColor.black.cgColor
     }
-    
 }
-
-// MARK:- CreateCommentTVCell
-extension CommentTVCell: NibLoadableView,ReusableView { }

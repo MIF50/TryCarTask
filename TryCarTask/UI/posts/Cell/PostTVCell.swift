@@ -7,7 +7,7 @@
 
 import UIKit
 
-class PostTVCell: UITableViewCell {
+class PostTVCell: BaseTableViewCell {
     
     // MARK:- data
     var post: Post! {
@@ -37,6 +37,3 @@ class PostTVCell: UITableViewCell {
         ImageUser.layer.borderColor = UIColor.lightGray.cgColor
     }
 }
-
-// MARK:- 
-extension PostTVCell: NibLoadableView, ReusableView { }

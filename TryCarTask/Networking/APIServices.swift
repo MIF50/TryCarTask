@@ -23,6 +23,7 @@ class APIServices: APIServicesProtocol {
     
     func fetchPosts(completion: @escaping (Result<[Post], Error>) -> Void) {
         let url = APIConfig.shared.getApiURL(path: .posts)
+       
         networking.didRequest(
             url: url,
             method: .get,
@@ -33,7 +34,7 @@ class APIServices: APIServicesProtocol {
     func fetchComments(postId: Int, completion: @escaping (Result<[Comment], Error>) -> Void) {
         let url = APIConfig.shared.getApiURLComments(postId: postId)
         networking.didRequest(
-            url: url,
+            url: APIEndPoint.comments(id: postId).url,
             completion: completion
         )
     }

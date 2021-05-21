@@ -17,10 +17,10 @@ class CommentViewModel: BaseViewModel {
     func fetchComments(with postId: Int) {
         if Connectivity.isConnectedToInternet {
             service.fetchComments(postId: postId) { result in
-                switch result {
-                case .success(let comments):
+                do {
+                    let comments = try result.get()
                     self.commentsSubject.send(comments)
-                case .failure(let error):
+                } catch {
                     self.commentsSubject.send(completion: .failure(error))
                 }
             }

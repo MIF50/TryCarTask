@@ -28,7 +28,7 @@ class BaseVC: UIViewController, BaseVCType, Storyboarded {
     
     func observeViewModel() {}
     
-    override func viewDidDisappear(_ animated: Bool) {
+    deinit {
         subscriber?.cancel()
     }
     
