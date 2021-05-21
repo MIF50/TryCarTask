@@ -8,6 +8,17 @@
 import UIKit
 import Combine
 
+enum PostState: Equatable {
+    static func == (lhs: PostState, rhs: PostState) -> Bool {
+        return true
+    }
+    
+    case loading
+    case loaded
+    case failure(error: Error)
+    case success(posts:[Post])
+}
+
 class PostViewModel: BaseViewModel {
     
     // MARK:- vars
@@ -19,19 +30,25 @@ class PostViewModel: BaseViewModel {
     
     private var posts = [Post]()
     private var filterPosts = [Post]()
+    
+    var postState = Observable<PostState>()
 
     func fetchPosts() {
         loading.property = true
+        postState.property = .loading
         if Connectivity.isConnectedToInternet {
             service.fetchPosts { result in
                 self.loading.property = false
+                self.postState.property = .loaded
                 switch result {
                 case .success(let posts):
                     self.posts = posts
                     self.manager.cachePosts(posts: posts)
                     self.postsSubject.send(posts)
+                    self.postState.property = .success(posts: posts)
                 case .failure(let error):
                     self.postsSubject.send(completion: .failure(error))
+                    self.postState.property = .failure(error: error)
                 }
             }
         } else {

@@ -72,6 +72,19 @@ class PostsVC: BaseVC {
         viewModel.loadingSearch.observe = {[weak self] isLoading in
             self?.searchView.isLoading = isLoading
         }
+        
+        viewModel.postState.observe = { state in
+            switch state  {
+            case .loading:
+                print("is loading state")
+            case .loaded:
+                print("is loaded state")
+            case .success(let posts):
+                print("get posts state \(posts.count)")
+            case .failure(let error):
+                print("error state \(error.localizedDescription)")
+            }
+        }
     }
     
     private func refreshTablView(with posts: [Post]) {

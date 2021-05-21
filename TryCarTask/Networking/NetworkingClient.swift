@@ -87,5 +87,11 @@ class NetworkingClient {
             }
             .store(in: &tokens)
         }
+    
+    func onClear() {
+        tokens.forEach {
+            $0.cancel()
+        }
+    }
 }
 

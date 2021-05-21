@@ -32,7 +32,7 @@ class APIServices: APIServicesProtocol {
     }
     
     func fetchComments(postId: Int, completion: @escaping (Result<[Comment], Error>) -> Void) {
-        let url = APIConfig.shared.getApiURLComments(postId: postId)
+//        let url = APIConfig.shared.getApiURLComments(postId: postId)
         networking.didRequest(
             url: APIEndPoint.comments(id: postId).url,
             completion: completion
